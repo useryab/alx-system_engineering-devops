@@ -15,4 +15,18 @@ In order to make this practical, a method had to be devised to protect the users
 * su - temporarily become the superuser
 * sudo - temporarily become the superuser
 * chown - change file ownership
-* chgrp - change a file's group ownership 
+* chgrp - change a file's group ownership
+* id
+* groups
+* whoami
+* adduser
+* useradd
+* addgroup
+
+### Resources That helped me
+
+* [Manage file permissions on Unix-like systems](https://kb.iu.edu/d/abdb)
+* [Understanding File Permissions](https://www.multacom.com/faq/password_protection/file_permissions.htm)
+* [Bash Scripting Tutorial for Beginners](https://www.youtube.com/watch?v=tK9Oc6AEnR4&t=1828s)
+* [Shell Scripting Tutorial for Beginners](https://www.youtube.com/playlist?list=PLS1QulWo1RIYmaxcEqw5JhK3b-6rgdWO_)
+* [Learning The Shell Lesson 9: Permissions](https://linuxcommand.org/lc3_lts0090.php)
