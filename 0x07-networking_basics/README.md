@@ -137,7 +137,9 @@ Think of the OSI model as a layered roadmap that illustrates the different stage
 * The transport layer provides reliable data transfer services between applications on different devices.
 * It establishes connections between applications, manages data flow control, and ensures error-free delivery of data packets.
 * Protocols like TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) operate at the transport layer.
-
+* 0-65535 TCP (favors reliability)
+* 0-65535 UDP (favors efficiency)
+both are strategies of distinguishing data streams
 **Layer 5: Session Layer**
 
 * The session layer establishes, manages, and terminates sessions between applications on different devices.
