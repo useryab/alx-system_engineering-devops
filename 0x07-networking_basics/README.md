@@ -9,7 +9,7 @@ Hosts: Any device that sends or recieves traffic
        - Phones
        - Servers
 
-Hosts can be divided into two *Clients and *Servers 
+Hosts can be divided into two *Clients and *Servers
 Clients: Devices that initiate a request
 Servers: Computers with software installed which responds to specific requests
 
@@ -27,10 +27,10 @@ is what transports traffic between hosts
 
 ## Networking Devices(part-2)
 
-### Repeater 
+### Repeater
 
 in a network signal decays as distace increases to mitigate that we use *Repeaters
-a repeater is a device that extends the reach of a signal by receiving it and then retransmitting it with a stronger power. 
+a repeater is a device that extends the reach of a signal by receiving it and then retransmitting it with a stronger power.
 This is particularly useful when a signal weakens as it travels over long distances or encounters obstacles.
 
 ### Hubs
@@ -41,7 +41,7 @@ In networking, a hub is a relatively simple device that functions like a multi-p
 
 * **Data Broadcasting:** When a device transmits data through a hub, that data gets broadcasted to all the other devices connected to the hub. This means every device receives the data, regardless of whether it's the intended recipient.
 
-* **Collision Domain:** Since every device receives all broadcasts, hubs create a single collision domain. This means if two devices attempt to transmit data simultaneously, the data packets collide and get corrupted. The devices then need to wait and re-transmit, causing network inefficiency.  
+* **Collision Domain:** Since every device receives all broadcasts, hubs create a single collision domain. This means if two devices attempt to transmit data simultaneously, the data packets collide and get corrupted. The devices then need to wait and re-transmit, causing network inefficiency.
 
 * **Limited Functionality:** Unlike a switch, hubs don't have the intelligence to identify the destination of data packets. They simply broadcast everything they receive.
 
@@ -57,7 +57,7 @@ In networking, a hub is a relatively simple device that functions like a multi-p
 
 * **Switches Offer Advantages:** Switches are more intelligent devices that can learn the MAC addresses of connected devices and direct data packets only to the intended recipient. This significantly reduces network congestion and improves overall performance.
 
-While hubs have largely been replaced by switches, they can still be found in some specific scenarios or legacy networks. 
+While hubs have largely been replaced by switches, they can still be found in some specific scenarios or legacy networks.
 
 
 ### Bridge
@@ -107,3 +107,50 @@ In summary, bridges play a crucial role in creating efficient and manageable net
 
 ### Router
 
+## The OSI Model
+
+The OSI model, also known as the Open Systems Interconnection model, is a conceptual framework developed by the International Organization for Standardization (ISO).  It provides a common language for discussing how network communication works.
+
+Think of the OSI model as a layered roadmap that illustrates the different stages involved in getting data from one device to another on a network. Each layer performs specific functions and interacts with the layer above and below it to ensure successful communication. Here's a breakdown of the seven layers of the OSI model:
+
+**Layer 1: Physical Layer**
+
+* The physical layer deals with the physical transmission of raw data bits across the network media, such as cables or wireless signals.
+* It includes specifications for things like connectors, voltages, and data transmission rates.
+* Examples of physical layer devices include network cables, hubs, wifi and repeaters.
+
+**Layer 2: Data Link Layer**
+
+* The data link layer is responsible for packaging data into frames and ensuring error-free transmission between network devices on the same physical link.
+* It performs error detection and correction and handles media access control (MAC) addressing, which is the unique hardware address assigned to network devices.
+* Switches operate at the data link layer.
+* NIC's, wifi access cards
+
+**Layer 3: Network Layer**
+
+* The network layer is responsible for routing data packets across different network segments. It determines the best path for data to travel to reach its destination.
+* This layer uses logical addressing, such as IP addresses, to identify devices on the network.
+* Routers operate at the network layer.
+
+**Layer 4: Transport Layer**
+
+* The transport layer provides reliable data transfer services between applications on different devices.
+* It establishes connections between applications, manages data flow control, and ensures error-free delivery of data packets.
+* Protocols like TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) operate at the transport layer.
+
+**Layer 5: Session Layer**
+
+* The session layer establishes, manages, and terminates sessions between applications on different devices.
+* It allows applications to exchange control information and synchronize communication.
+
+**Layer 6: Presentation Layer**
+
+* The presentation layer deals with data formatting and encryption.
+* It ensures that data is presented in a way that can be understood by the receiving application, regardless of the underlying hardware or software differences.
+
+**Layer 7: Application Layer**
+
+* The application layer provides network services directly to user applications.
+* This is the layer where user applications like web browsers, email clients, and file transfer programs interact with the network.
+
+The OSI model, although not a specific protocol used in actual network communication, serves as a valuable tool for understanding the different functionalities involved in data transmission over a network. It provides a common reference point for network professionals to troubleshoot network issues and develop network protocols.
