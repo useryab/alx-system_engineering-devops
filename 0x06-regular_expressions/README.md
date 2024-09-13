@@ -1,6 +1,6 @@
 # 0x06. Regular expressions
 
-![Regex](https://coderpad.io/blog/development/the-complete-guide-to-regular-expressions-regex/)
+![Regex](https://coderpad.io/wp-content/uploads/2022/04/coderpad-regex-the-complete-guide.jpg)
 
 ## Background Context
 
