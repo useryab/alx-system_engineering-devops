@@ -24,6 +24,7 @@ sylvain@ubuntu$ ./example.rb 127.0.0.a
 
 ### Read or watch:
 
+* []()
 * [Regular expressions - basics](https://intranet.alxswe.com/rltoken/rtBWhqR4L-6p9PRwzlNLug)
 * [Regular expressions - advanced](https://intranet.alxswe.com/rltoken/grJS5VDnUKBYwDpBTM7yCg)
 * [Rubular is your best friend](https://intranet.alxswe.com/rltoken/RGkVuw1lZ_hoCCbLsiOAhg)
@@ -39,23 +40,63 @@ Regex is a powerful tool for pattern matching in text. It allows you to define s
 **Basic Components of Regex:**
 
 * **Characters:** The most basic elements of a regex. They can be literal characters (e.g., "a", "1", "@") or special characters (e.g., "." for any character, "^" for beginning of line, "$" for end of line).
+*  **Character sets**
+*  [abc]: Find all abc occurences
+*  [^abc]: Find all occurences except abc
+*  [a-z]: find letters in specified range including themselves(`lowercase`)
+*  [A-Z]: find letters in specified range including themselves(`Uppercase`)
+*  [0-9]: find numbers in specified range
+*
 * **Quantifiers:** Specify how many times a character or group should appear.
-    - `*`: Zero or more times
-    - `+`: One or more times
-    - `?`: Zero or one time
+
+repeaters: special characters used to specify how many times a character will be repeated
+    - `*`: Zero or more times match
+
+    - `+`: One or more times match
+
+    - `?`: Zero or one time match
+
+Curlybraces: number of occurences
     - `{n}`: Exactly n times
     - `{n,}`: At least n times
     - `{n,m}`: Between n and m times
 * **Character Classes:** Define sets of characters.
     - `[abc]`: Matches any of the characters a, b, or c
     - `[^abc]`: Matches any character except a, b, or c
+
+
     - `\d`: Matches any digit
     - `\w`: Matches any word character (alphanumeric or underscore)
     - `\s`: Matches any whitespace character
+
+
 * **Anchors:** Specify positions within a string.
     - `^`: Beginning of line
     - `$`: End of line
     - `\b`: Word boundary
+
+Parentheses ( ): Grouping
+
+We can group an expression and use these groups to reference or enforce some rules. To group an expression, we enclose () in parentheses. For now just group haa below.
+
+```
+ha-ha,`haa-haa`
+```
+
+```ruby
+/(haa)/
+```
+
+Referencing a Group
+The words ha and haa are grouped below. The first group is used by writing \1 to avoid rewriting. Here 1 denotes the order of grouping. Type \2 at the end of the expression to refer to the second group.
+
+```
+ha-ha,haa-haa
+```
+
+```ruby
+(ha)-\1,(haa)-\2
+```
 
 **Practical Examples:**
 
