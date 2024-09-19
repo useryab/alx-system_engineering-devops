@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
-# Bash script that will display information about subdomains
-domain () {
-if [ "$2" ];
-then
-    echo -n "The subdomain $2 is a"
-    dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{print " " $4 " record and points to " $5}' | tail -n 1
-else
-    for i in www lb-01 web-01 web-02
+#returns all subdomains records and ips for a domain
+
+domain=$1
+function printing {
+    for var in "$@"
     do
-        echo -n "The subdomain $i is a"
-        dig "$i.$1" | grep -A1 'ANSWER SECTION:' | awk '{print " " $4 " record and points to " $5}' | tail -n 1
+            full_domain=$var.$1
+            dig "$full_domain" |\
+            awk -v var=$var '/ANSWER SECTION:/ {getline; print "The subdomain " var " is a " $4 " record and points to " $5}'
     done
-fi
 }
-domain "$1" "$2"
+if [ $# == 1 ]; then
+    printing "$domain" www lb-01 web-01 web-02
+elif [ $# == 2 ]; then
+    subdomain=$2
+    printing "$domain" "$subdomain"
+fi
